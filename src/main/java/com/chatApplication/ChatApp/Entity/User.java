@@ -1,10 +1,7 @@
-package com.chatApplication.ChatApp.Model;
+package com.chatApplication.ChatApp.Entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -12,8 +9,9 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "users")
+@Table(name = "users", schema="Chat_Application")
 public class User {
+
     @Id
     private Integer id;
     private String name;

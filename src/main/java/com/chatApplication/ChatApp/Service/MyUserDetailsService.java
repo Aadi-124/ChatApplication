@@ -1,7 +1,7 @@
 package com.chatApplication.ChatApp.Service;
 
-import com.chatApplication.ChatApp.Model.User;
-import com.chatApplication.ChatApp.Model.UserPrinciples;
+import com.chatApplication.ChatApp.Entity.User;
+import com.chatApplication.ChatApp.Entity.UserPrinciples;
 import com.chatApplication.ChatApp.Repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
