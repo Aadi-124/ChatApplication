@@ -6,3 +6,5 @@ spring.jpa.database-platform - 	Tells Hibernate to use PostgreSQL syntax.
 spring.jpa.hibernate.ddl-auto - 	Controls schema creation (update is safe).
 spring.jpa.show-sql - 	Prints SQL  queries in the console.
 spring.jpa.properties.hibernate.format_sql - 	Formats SQL for better readability.
+
+
