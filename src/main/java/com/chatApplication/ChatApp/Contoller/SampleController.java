@@ -52,6 +52,16 @@ public class SampleController {
         }
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<?> loginUser(@RequestBody User user){
+        String token = service.verify(user);
+        if(token != "INVALID_USER"){
+            return ResponseEntity.status(200).body(token);
+        } else {
+            return ResponseEntity.status(401).body(token);
+        }
+    }
+
 
 
     @GetMapping("/public")
