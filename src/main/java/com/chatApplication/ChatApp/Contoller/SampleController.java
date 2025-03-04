@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -63,17 +64,20 @@ public class SampleController {
     }
 
 
-
+    @PreAuthorize("hasRole('PUBLIC')")
     @GetMapping("/public")
     public String publicPath(){
         return "Public Access!";
     }
 
+    @PreAuthorize("hasRole('NORMAL')")
     @GetMapping("/normal")
     public String NormailPath(){
         return "Normal Access!";
     }
 
+
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/admin")
     public String adminPath(){
         return "Admin Access";
